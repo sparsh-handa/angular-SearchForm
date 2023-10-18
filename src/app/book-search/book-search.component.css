@@ -1,0 +1,43 @@
+/* Center the search bar */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the search button */
+button[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Display the books in a row */
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-box {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    height: auto; /* adjust height automatically */
+    max-width: 300px; /* limit maximum width */
+}
+
+.book-box h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.book-box p {
+    font-size: 14px;
+    margin-bottom: 0;
+}

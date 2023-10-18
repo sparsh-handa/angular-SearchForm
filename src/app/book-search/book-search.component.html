@@ -1,0 +1,18 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="searchTerm">
+    <button type="submit">Search</button>
+</form>
+
+<div class="books-container">
+    <ng-container *ngIf="filteredBooks.length > 0; else noResults">
+        <div class="book-box" *ngFor="let book of filteredBooks">
+            <img [src]="book?.image">
+            <h2>{{book.title}}</h2>
+            <p><b>{{book.author}}</b></p>
+            <p>{{book.summary}}</p>
+            <p><b>Price: EUR {{book.price}}</b></p>
+        </div>
+    </ng-container>
+
+    <ng-template #noResults>No results found.</ng-template>
+</div>
